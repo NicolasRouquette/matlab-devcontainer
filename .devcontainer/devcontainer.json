@@ -1,0 +1,11 @@
+// Doc: https://containers.dev/implementors/json_reference/#general-properties
+{
+  "name": "matlab R2022b",
+  "image": "mathworks/matlab:r2022b",
+  "forwardPorts": [6080],
+  "portsAttributes": {
+		"6080": {"label": "noVNC Ubuntu Desktop Root Display", "onAutoForward": "openBrowser"}
+  },
+  "postStartCommand": "/usr/bin/tini -- matlab -browser"
+
+}
